@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var rect = {
+            x1: 1,
+            y1: 5,
+            x2: 6,
+            y2: 2
+        };
+        // var str = "";
+        var n, m;
+
+        //1
+
+        function objProperties(givenObject) {
+            let str = "Свойства данного объекта:";
+            for (var tempProperty in givenObject)
+                str += "\n" + tempProperty + ": " + givenObject[tempProperty];
+            alert(str);
+        }
+        // objProperties(rect);
+
+        //2
+
+        // function rectSizes(givenRect) {
+        //     alert("Ширина прямоугольника = " + (givenRect.x2 - givenRect.x1) + "\nВысота прямоугольника = " + (givenRect.y1 - givenRect.y2) + ".");
+        // }
+        // rectSizes(rect);
+
+        //3
+
+        // n = +prompt("Величина изменения ширины.");
+        // m = +prompt("Величина изменения высоты.");
+        // function changedSizes(givenRect) {
+        //     alert("Измененная ширина прямоугольника = " + (givenRect.x2 - givenRect.x1 + n) + "\nИзмененная высота прямоугольника = " + (givenRect.y1 - givenRect.y2 + m) + ".");
+        // }
+        // changedSizes(rect);
+
+        //4
+
+        // n = +prompt("Величина сдвига по х.");
+        // m = +prompt("Величина сдвига по y.");
+        // function moveRect(givenRect) {
+        //     givenRect.x1 += n; givenRect.x2 += n;
+        //     givenRect.y1 += m; givenRect.y2 += m;
+        //     objProperties(givenRect);
+        // }
+        // moveRect(rect);
+
+        //5
+
+        n = +prompt("Координата точки по х.");
+        m = +prompt("Координата точки по y.");
+        function checkDot(givenRect) {
+            if (n >= givenRect.x1 && n <= givenRect.x2 && m >= givenRect.y2 && m <= givenRect.y1)
+            alert ("Точка принадлежит данному прямоугольнику.");
+            else
+            alert ("Точка не принадлежит данному прямоугольнику.");
+        }
+        checkDot(rect);
+
+        
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
